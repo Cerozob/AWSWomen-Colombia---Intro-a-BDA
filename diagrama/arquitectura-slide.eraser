@@ -1,0 +1,40 @@
+// Versión "Slide" (deck)
+direction right
+colorMode pastel
+styleMode plain
+typeface clean
+
+App web [icon: aws-cloudfront, label: "App web"]
+Cognito [icon: aws-cognito, label: "Cognito"]
+API [icon: aws-api-gateway, label: "API + autorizador"]
+CVs [icon: aws-s3, label: "S3 hojas de vida"]
+Nueva hoja de vida [icon: aws-eventbridge, label: "EventBridge"]
+
+Step Functions [icon: aws-step-functions] {
+  Preprocesar [icon: aws-lambda, label: "Preprocesar"]
+  Iniciar BDA [icon: aws-bedrock, label: "Iniciar job BDA (paso nativo)"]
+  Esperar [icon: clock, label: "Esperar 10 s"]
+  Consultar [icon: aws-bedrock, label: "Consultar estado (paso nativo)"]
+  Postprocesar [icon: aws-lambda, label: "Postprocesar"]
+}
+
+BDA [icon: aws-bedrock, label: "Bedrock Data Automation + blueprint"]
+Resultados [icon: aws-s3, label: "S3 resultados BDA"]
+DynamoDB [icon: aws-dynamodb, label: "DynamoDB"]
+
+App web > Cognito: login
+App web > API
+App web > CVs: sube CV
+CVs > Nueva hoja de vida
+Nueva hoja de vida > Preprocesar
+Preprocesar > Iniciar BDA
+Iniciar BDA > Esperar
+Esperar > Consultar
+Consultar --> Esperar: en proceso
+Consultar > Postprocesar: listo
+Iniciar BDA > BDA: inicia job
+CVs > BDA: lee CV
+BDA > Resultados: escribe JSON
+Resultados > Postprocesar: lee JSON
+Postprocesar > DynamoDB
+API > DynamoDB

@@ -1,0 +1,17 @@
+{
+  "job_id": "abc123",
+  "job_status": "PROCESSED",
+  "semantic_modality": "DOCUMENT",
+  "output_metadata": [
+    {
+      "asset_id": 0,
+      "segment_metadata": [
+        {
+          "standard_output_path": "s3://resultados-bda/bda/doc-1/abc123/0/standard_output/0/result.json",
+          "custom_output_path": "s3://resultados-bda/bda/doc-1/abc123/0/custom_output/0/result.json",
+          "custom_output_status": "MATCH"
+        }
+      ]
+    }
+  ]
+}

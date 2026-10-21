@@ -1,0 +1,34 @@
+[project]
+name = "bda-ats-demo"
+version = "0.1.0"
+description = "Demo ATS de hojas de vida con Amazon Bedrock Data Automation (infra CDK + Lambdas)"
+requires-python = ">=3.13"
+dependencies = [
+    "aws-cdk-lib>=2.273.0",
+    "constructs>=10.4.0",
+    "cdk-nag>=3.0.2",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "ruff>=0.14",
+    "boto3>=1.40",
+    "aws-lambda-powertools[tracer]>=3.36.0",
+    "pyjwt[crypto]>=2.15.1",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["backend/tests", "infra/tests"]
+pythonpath = ["infra", "backend"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py313"
+extend-exclude = ["cdk.out", "frontend"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

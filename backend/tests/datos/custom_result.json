@@ -1,0 +1,2460 @@
+{
+  "matched_blueprint": {
+    "arn": "arn:aws:bedrock:us-east-1:123456789012:blueprint/9af2ed4c8020",
+    "version": "dev",
+    "name": "hojadevidatest",
+    "confidence": 1
+  },
+  "document_class": {
+    "type": "Hoja de vida"
+  },
+  "split_document": {
+    "page_indices": [
+      0
+    ]
+  },
+  "inference_result": {
+    "nombre_completo": "JESSICA CLAIRE",
+    "ubicacion": "100 Montgomery St. 10th Floor",
+    "certificaciones": [
+      ""
+    ],
+    "linkedin": "",
+    "resumen_perfil": "Profesional en Bioinformática y Ciencia de Datos con más de 8 años de experiencia en análisis de datos moleculares y clínicos aplicados a investigación oncológica. Experta en programación R, Python, SQL y herramientas de visualización, con habilidades demostradas en automatización de procesos y desarrollo de aplicaciones para usuarios no técnicos. Destaca por su capacidad de trabajo colaborativo con equipos multidisciplinarios, excelentes habilidades de presentación ante liderazgo ejecutivo y compañías farmacéuticas, y compromiso con la calidad en entornos de investigación clínica de alto impacto.",
+    "habilidades_blandas": [
+      "Liderazgo",
+      "Comunicación",
+      "Trabajo en equipo",
+      "Pensamiento crítico",
+      "Servicio al cliente"
+    ],
+    "titulo_profesional": "",
+    "idioma_documento": "inglés",
+    "idiomas": [
+      {
+        "idioma": "",
+        "nivel": ""
+      }
+    ],
+    "anios_experiencia": 8.3,
+    "nivel_seniority": "Senior",
+    "experiencia": [
+      {
+        "fecha_inicio": "2018-12",
+        "fecha_fin": "actual",
+        "logros_clave": "Primary responsibilities include demonstrating ORIEN Informatics portal and collect feedback and feature requirements from researchers including biologists, clinical trial designers and clinicians Active contributor to monthly clinical/molecular data releases",
+        "empresa": "Konica Minolta",
+        "cargo": "Bioinformatics and Data Science Engineer"
+      },
+      {
+        "fecha_inicio": "2018-05",
+        "fecha_fin": "2018-12",
+        "logros_clave": "Work collaboratively in a team of lead medical oncologist to automate the collection and reporting of CAR-T cell therapy data Automate processes using R and MySQL to support the data needs of ICE-T leadership",
+        "empresa": "Bionano Genomics, Inc.",
+        "cargo": "BMT Data Analyst"
+      },
+      {
+        "fecha_inicio": "2016-08",
+        "fecha_fin": "2018-05",
+        "logros_clave": "Demonstrate initiative by completing Moffitt Cancer Center classes in Bioinformatics and Biostatistics Build RedCap forms for clinical data abstraction Create video tutorials using Camtasia to teach customers how to use Qlik based tools",
+        "empresa": "Moffitt Cancer Center (M2Gen)",
+        "cargo": "Data Project Analyst"
+      },
+      {
+        "fecha_inicio": "2016-04",
+        "fecha_fin": "2016-08",
+        "logros_clave": "Work directly with Executive Leadership to data mine clinicaltrials.gov and PubMed using R-Programming Apply a high degree of critical thinking to develop R-Scripts to compile PFS",
+        "empresa": "Moffitt Cancer Center (M2Gen)",
+        "cargo": "Bioinformatics Intern"
+      }
+    ],
+    "educacion": [
+      {
+        "institucion": "University of Waterloo",
+        "titulo": "Bachelor of Science: Honors Biochemistry",
+        "anio_fin": "2015"
+      },
+      {
+        "institucion": "Heart Lake Secondary School",
+        "titulo": "High School Diploma",
+        "anio_fin": "2010"
+      }
+    ],
+    "telefono": "(555) 432-1000",
+    "habilidades_tecnicas": [
+      "R-Programming",
+      "Linux",
+      "bash scripting",
+      "MySQL",
+      "Microsoft SQL Server",
+      "Apache Drill (NoSQL)",
+      "Python",
+      "Java",
+      "Visual Basic",
+      "Qlik Sense",
+      "DNAnexus",
+      "iStar",
+      "Jira",
+      "RedCap",
+      "Camtasia",
+      "SQL",
+      "MS Office",
+      "Office 365",
+      "Teams",
+      "OneDrive",
+      "Excel",
+      "Word",
+      "XML"
+    ],
+    "email": "resumesample@example.com"
+  },
+  "explainability_info": [
+    {
+      "nombre_completo": {
+        "success": true,
+        "confidence": 0.5625,
+        "geometry": [
+          {
+            "boundingBox": {
+              "top": 0.029075522476303736,
+              "left": 0.04077642126192269,
+              "width": 0.13689359239188478,
+              "height": 0.03941071781726353
+            },
+            "vertices": [
+              {
+                "x": 0.04077642126192269,
+                "y": 0.029075522476303736
+              },
+              {
+                "x": 0.17766969767746094,
+                "y": 0.029077644388794642
+              },
+              {
+                "x": 0.17767001365380747,
+                "y": 0.06848624029356727
+              },
+              {
+                "x": 0.04077683479210502,
+                "y": 0.06848425077377193
+              }
+            ],
+            "page": 1
+          }
+        ],
+        "type": "string",
+        "value": "JESSICA CLAIRE"
+      },
+      "ubicacion": {
+        "success": true,
+        "confidence": 0.421875,
+        "geometry": [
+          {
+            "boundingBox": {
+              "top": 0.14247892769280657,
+              "left": 0.07527570977825296,
+              "width": 0.1536838697271458,
+              "height": 0.018317244812041777
+            },
+            "vertices": [
+              {
+                "x": 0.07527570977825296,
+                "y": 0.14247892769280657
+              },
+              {
+                "x": 0.22895944964067824,
+                "y": 0.14248088216771052
+              },
+              {
+                "x": 0.22895957950539875,
+                "y": 0.16079617250484834
+              },
+              {
+                "x": 0.07527589054247408,
+                "y": 0.1607942871067896
+              }
+            ],
+            "page": 1
+          }
+        ],
+        "type": "string",
+        "value": "100 Montgomery St. 10th Floor"
+      },
+      "certificaciones": [
+        {
+          "confidence": 0.578125,
+          "type": "string",
+          "value": ""
+        }
+      ],
+      "linkedin": {
+        "success": true,
+        "confidence": 0.59765625,
+        "type": "string",
+        "value": ""
+      },
+      "resumen_perfil": {
+        "success": true,
+        "confidence": 0.2890625,
+        "geometry": [
+          {
+            "boundingBox": {
+              "top": 0.07947770788906301,
+              "left": 0.33532200304879417,
+              "width": 0.254243181799464,
+              "height": 0.009588566919132499
+            },
+            "vertices": [
+              {
+                "x": 0.33532200304879417,
+                "y": 0.07947770788906301
+              },
+              {
+                "x": 0.5895651793873149,
+                "y": 0.07948133433529425
+              },
+              {
+                "x": 0.5895651848482582,
+                "y": 0.08906627480819551
+              },
+              {
+                "x": 0.3353220525761051,
+                "y": 0.08906270816646912
+              }
+            ],
+            "page": 1
+          },
+          {
+            "boundingBox": {
+              "top": 0.09089727944195426,
+              "left": 0.552930925643809,
+              "width": 0.16656323882614643,
+              "height": 0.030710646673836134
+            },
+            "vertices": [
+              {
+                "x": 0.552930925643809,
+                "y": 0.09089727944195426
+              },
+              {
+                "x": 0.7194941644699554,
+                "y": 0.0908996085825397
+              },
+              {
+                "x": 0.7194941098172222,
+                "y": 0.1216079261157904
+              },
+              {
+                "x": 0.5529309634825023,
+                "y": 0.12160572250056689
+              }
+            ],
+            "page": 1
+          },
+          {
+            "boundingBox": {
+              "top": 0.09028985704272953,
+              "left": 0.7732239261764127,
+              "width": 0.15581560802218275,
+              "height": 0.009648088092172921
+            },
+            "vertices": [
+              {
+                "x": 0.7732239527155087,
+                "y": 0.09028985704272953
+              },
+              {
+                "x": 0.9290395341985954,
+                "y": 0.09029203822770619
+              },
+              {
+                "x": 0.9290394804814742,
+                "y": 0.09993794513490245
+              },
+              {
+                "x": 0.7732239261764127,
+                "y": 0.09993580083516947
+              }
+            ],
+            "page": 1
+          },
+          {
+            "boundingBox": {
+              "top": 0.11238415664595863,
+              "left": 0.3350779419456732,
+              "width": 0.15239968063605402,
+              "height": 0.008549142790104006
+            },
+            "vertices": [
+              {
+                "x": 0.3350779419456732,
+                "y": 0.11238415664595863
+              },
+              {
+                "x": 0.4874776019339026,
+                "y": 0.11238620735745665
+              },
+              {
+                "x": 0.4874776225817272,
+                "y": 0.12093329943606264
+              },
+              {
+                "x": 0.33507798614785017,
+                "y": 0.1209312806911476
+              }
+            ],
+            "page": 1
+          },
+          {
+            "boundingBox": {
+              "top": 0.2371132666701393,
+              "left": 0.5670963234636452,
+              "width": 0.027353499460372577,
+              "height": 0.007448411584389858
+            },
+            "vertices": [
+              {
+                "x": 0.5670963234636452,
+                "y": 0.2371132666701393
+              },
+              {
+                "x": 0.5944498193383742,
+                "y": 0.2371135510166905
+              },
+              {
+                "x": 0.5944498229240178,
+                "y": 0.24456167825452915
+              },
+              {
+                "x": 0.5670963307333533,
+                "y": 0.24456139890779288
+              }
+            ],
+            "page": 1
+          },
+          {
+            "boundingBox": {
+              "top": 0.33235114590834064,
+              "left": 0.5197162486237256,
+              "width": 0.038587986411797504,
+              "height": 0.005616917305422242
+            },
+            "vertices": [
+              {
+                "x": 0.5197162486237256,
+                "y": 0.33235114590834064
+              },
+              {
+                "x": 0.5583042286604925,
+                "y": 0.332351456851136
+              },
+              {
+                "x": 0.5583042350355231,
+                "y": 0.3379680632137629
+              },
+              {
+                "x": 0.5197162589179304,
+                "y": 0.3379677575898319
+              }
+            ],
+            "page": 1
+          },
+          {
+            "boundingBox": {
+              "top": 0.3594539966386401,
+              "left": 0.06047121046491102,
+              "width": 0.15774373909718592,
+              "height": 0.01953732728095925
+            },
+            "vertices": [
+              {
+                "x": 0.06047121046491102,
+                "y": 0.3594539966386401
+              },
+              {
+                "x": 0.21821480724447734,
+                "y": 0.35945516280727763
+              },
+              {
+                "x": 0.21821494956209694,
+                "y": 0.37899132391959933
+              },
+              {
+                "x": 0.06047140850939705,
+                "y": 0.37899023337848986
+              }
+            ],
+            "page": 1
+          }
+        ],
+        "type": "string",
+        "value": "Profesional en Bioinformática y Ciencia de Datos con más de 8 años de experiencia en análisis de datos moleculares y clínicos aplicados a investigación oncológica. Experta en programación R, Python, SQL y herramientas de visualización, con habilidades demostradas en automatización de procesos y desarrollo de aplicaciones para usuarios no técnicos. Destaca por su capacidad de trabajo colaborativo con equipos multidisciplinarios, excelentes habilidades de presentación ante liderazgo ejecutivo y compañías farmacéuticas, y compromiso con la calidad en entornos de investigación clínica de alto impacto."
+      },
+      "habilidades_blandas": [
+        {
+          "confidence": 0.455078125,
+          "type": "string",
+          "value": "Liderazgo"
+        },
+        {
+          "confidence": 0.54296875,
+          "type": "string",
+          "value": "Comunicación"
+        },
+        {
+          "confidence": 0.5703125,
+          "type": "string",
+          "value": "Trabajo en equipo"
+        },
+        {
+          "confidence": 0.259765625,
+          "type": "string",
+          "value": "Pensamiento crítico"
+        },
+        {
+          "confidence": 0.80078125,
+          "type": "string",
+          "value": "Servicio al cliente"
+        }
+      ],
+      "titulo_profesional": {
+        "success": true,
+        "confidence": 0.0693359375,
+        "type": "string",
+        "value": ""
+      },
+      "idioma_documento": {
+        "success": true,
+        "confidence": 0.6796875,
+        "type": "string",
+        "value": "inglés"
+      },
+      "idiomas": [
+        {
+          "idioma": {
+            "success": true,
+            "confidence": 0.31640625,
+            "type": "string",
+            "value": ""
+          },
+          "nivel": {
+            "success": true,
+            "confidence": 0.349609375,
+            "type": "string",
+            "value": ""
+          }
+        }
+      ],
+      "anios_experiencia": {
+        "success": true,
+        "confidence": 0.66015625,
+        "geometry": [
+          {
+            "boundingBox": {
+              "top": 0.24858929771590388,
+              "left": 0.42690912101154516,
+              "width": 0.04982276112169265,
+              "height": 0.00659394441183081
+            },
+            "vertices": [
+              {
+                "x": 0.42690912101154516,
+                "y": 0.24858929771590388
+              },
+              {
+                "x": 0.47673186492375585,
+                "y": 0.24858980160258934
+              },
+              {
+                "x": 0.4767318821332378,
+                "y": 0.2551832421277347
+              },
+              {
+                "x": 0.4269091441613303,
+                "y": 0.2551827463028563
+              }
+            ],
+            "page": 1
+          }
+        ],
+        "type": "number",
+        "value": 8.3
+      },
+      "nivel_seniority": {
+        "success": true,
+        "confidence": 0.470703125,
+        "type": "string",
+        "value": "Senior"
+      },
+      "experiencia": [
+        {
+          "fecha_inicio": {
+            "success": true,
+            "confidence": 0.58984375,
+            "geometry": [
+              {
+                "boundingBox": {
+                  "top": 0.24858929771590388,
+                  "left": 0.42690912101154516,
+                  "width": 0.04982276112169265,
+                  "height": 0.00659394441183081
+                },
+                "vertices": [
+                  {
+                    "x": 0.42690912101154516,
+                    "y": 0.24858929771590388
+                  },
+                  {
+                    "x": 0.47673186492375585,
+                    "y": 0.24858980160258934
+                  },
+                  {
+                    "x": 0.4767318821332378,
+                    "y": 0.2551832421277347
+                  },
+                  {
+                    "x": 0.4269091441613303,
+                    "y": 0.2551827463028563
+                  }
+                ],
+                "page": 1
+              }
+            ],
+            "type": "string",
+            "value": "2018-12"
+          },
+          "fecha_fin": {
+            "success": true,
+            "confidence": 0.25390625,
+            "geometry": [
+              {
+                "boundingBox": {
+                  "top": 0.24834574094653988,
+                  "left": 0.4906529033697878,
+                  "width": 0.04567072178062431,
+                  "height": 0.007326496450101749
+                },
+                "vertices": [
+                  {
+                    "x": 0.4906529033697878,
+                    "y": 0.24834574094653988
+                  },
+                  {
+                    "x": 0.5363236139232438,
+                    "y": 0.24834620311497269
+                  },
+                  {
+                    "x": 0.5363236251504121,
+                    "y": 0.25567223739664163
+                  },
+                  {
+                    "x": 0.49065292064722826,
+                    "y": 0.2556717834392837
+                  }
+                ],
+                "page": 1
+              }
+            ],
+            "type": "string",
+            "value": "actual"
+          },
+          "logros_clave": {
+            "success": true,
+            "confidence": 0.40625,
+            "geometry": [
+              {
+                "boundingBox": {
+                  "top": 0.2588448669947928,
+                  "left": 0.3350786993796602,
+                  "width": 0.5993328095869819,
+                  "height": 0.03199592130241424
+                },
+                "vertices": [
+                  {
+                    "x": 0.3350786993796602,
+                    "y": 0.2588448669947928
+                  },
+                  {
+                    "x": 0.934411508966642,
+                    "y": 0.25885077754626085
+                  },
+                  {
+                    "x": 0.9344113277092981,
+                    "y": 0.29084078829720705
+                  },
+                  {
+                    "x": 0.3350788648211477,
+                    "y": 0.29083534826748875
+                  }
+                ],
+                "page": 1
+              }
+            ],
+            "type": "string",
+            "value": "Primary responsibilities include demonstrating ORIEN Informatics portal and collect feedback and feature requirements from researchers including biologists, clinical trial designers and clinicians Active contributor to monthly clinical/molecular data releases"
+          },
+          "empresa": {
+            "success": true,
+            "confidence": 0.73046875,
+            "geometry": [
+              {
+                "boundingBox": {
+                  "top": 0.23698875354628168,
+                  "left": 0.3350785863489156,
+                  "width": 0.09329589718225878,
+                  "height": 0.007571228668717567
+                },
+                "vertices": [
+                  {
+                    "x": 0.3350785863489156,
+                    "y": 0.23698875354628168
+                  },
+                  {
+                    "x": 0.4283744571523797,
+                    "y": 0.23698972366016
+                  },
+                  {
+                    "x": 0.42837448353117435,
+                    "y": 0.24455998221499925
+                  },
+                  {
+                    "x": 0.33507862549923945,
+                    "y": 0.24455902943378702
+                  }
+                ],
+                "page": 1
+              }
+            ],
+            "type": "string",
+            "value": "Konica Minolta"
+          },
+          "cargo": {
+            "success": true,
+            "confidence": 0.51953125,
+            "geometry": [
+              {
+                "boundingBox": {
+                  "top": 0.07947924417008048,
+                  "left": 0.44302771291578735,
+                  "width": 0.08792261879256602,
+                  "height": 0.0076325873805692945
+                },
+                "vertices": [
+                  {
+                    "x": 0.44302771291578735,
+                    "y": 0.07947924417008048
+                  },
+                  {
+                    "x": 0.5309503192718569,
+                    "y": 0.07948049827101272
+                  },
+                  {
+                    "x": 0.5309503317083534,
+                    "y": 0.08711183155064978
+                  },
+                  {
+                    "x": 0.4430277374852881,
+                    "y": 0.08711059391599915
+                  }
+                ],
+                "page": 1
+              },
+              {
+                "boundingBox": {
+                  "top": 0.0794809441722622,
+                  "left": 0.5622115989852148,
+                  "width": 0.1348137193113247,
+                  "height": 0.009464737327203182
+                },
+                "vertices": [
+                  {
+                    "x": 0.5622115989852148,
+                    "y": 0.0794809441722622
+                  },
+                  {
+                    "x": 0.6970253182965395,
+                    "y": 0.07948286711356335
+                  },
+                  {
+                    "x": 0.6970253052999572,
+                    "y": 0.08894568149946538
+                  },
+                  {
+                    "x": 0.5622116090571945,
+                    "y": 0.0889437898658331
+                  }
+                ],
+                "page": 1
+              },
+              {
+                "boundingBox": {
+                  "top": 0.23698986587543375,
+                  "left": 0.44205130283169974,
+                  "width": 0.2662082034803989,
+                  "height": 0.009526576012791665
+                },
+                "vertices": [
+                  {
+                    "x": 0.44205130283169974,
+                    "y": 0.23698986587543375
+                  },
+                  {
+                    "x": 0.7082595063120987,
+                    "y": 0.2369926339751417
+                  },
+                  {
+                    "x": 0.7082594912969843,
+                    "y": 0.2465164418882254
+                  },
+                  {
+                    "x": 0.44205133366250504,
+                    "y": 0.24651373600812454
+                  }
+                ],
+                "page": 1
+              }
+            ],
+            "type": "string",
+            "value": "Bioinformatics and Data Science Engineer"
+          }
+        },
+        {
+          "fecha_inicio": {
+            "success": true,
+            "confidence": 0.373046875,
+            "geometry": [
+              {
+                "boundingBox": {
+                  "top": 0.41757652397352585,
+                  "left": 0.43985383074226175,
+                  "width": 0.05128794421830407,
+                  "height": 0.007082103689059205
+                },
+                "vertices": [
+                  {
+                    "x": 0.43985383074226175,
+                    "y": 0.41757652397352585
+                  },
+                  {
+                    "x": 0.4911417583216937,
+                    "y": 0.41757682998323004
+                  },
+                  {
+                    "x": 0.4911417749605658,
+                    "y": 0.42465862766258505
+                  },
+                  {
+                    "x": 0.4398538539490672,
+                    "y": 0.42465833056641955
+                  }
+                ],
+                "page": 1
+              }
+            ],
+            "type": "string",
+            "value": "2018-05"
+          },
+          "fecha_fin": {
+            "success": true,
+            "confidence": 0.3359375,
+            "geometry": [
+              {
+                "boundingBox": {
+                  "top": 0.41782111873250866,
+                  "left": 0.5060396564523367,
+                  "width": 0.04933395177572142,
+                  "height": 0.006837881006600155
+                },
+                "vertices": [
+                  {
+                    "x": 0.5060396564523367,
+                    "y": 0.41782111873250866
+                  },
+                  {
+                    "x": 0.5553736001048101,
+                    "y": 0.4178214127881047
+                  },
+                  {
+                    "x": 0.5553736082280581,
+                    "y": 0.4246589997391088
+                  },
+                  {
+                    "x": 0.5060396706754194,
+                    "y": 0.42465871396180715
+                  }
+                ],
+                "page": 1
+              }
+            ],
+            "type": "string",
+            "value": "2018-12"
+          },
+          "logros_clave": {
+            "success": true,
+            "confidence": 0.1435546875,
+            "geometry": [
+              {
+                "boundingBox": {
+                  "top": 0.4327164562390173,
+                  "left": 0.3541295080625176,
+                  "width": 0.5983534756094218,
+                  "height": 0.031993143163310145
+                },
+                "vertices": [
+                  {
+                    "x": 0.3541295080625176,
+                    "y": 0.4327164562390173
+                  },
+                  {
+                    "x": 0.9524829836719393,
+                    "y": 0.432719803995242
+                  },
+                  {
+                    "x": 0.9524827919614668,
+                    "y": 0.4647095994023274
+                  },
+                  {
+                    "x": 0.35412966248295286,
+                    "y": 0.46470672139457014
+                  }
+                ],
+                "page": 1
+              }
+            ],
+            "type": "string",
+            "value": "Work collaboratively in a team of lead medical oncologist to automate the collection and reporting of CAR-T cell therapy data Automate processes using R and MySQL to support the data needs of ICE-T leadership"
+          },
+          "empresa": {
+            "success": true,
+            "confidence": 0.62890625,
+            "geometry": [
+              {
+                "boundingBox": {
+                  "top": 0.4053658533457368,
+                  "left": 0.3353236869677347,
+                  "width": 0.152398872543567,
+                  "height": 0.009036356421999514
+                },
+                "vertices": [
+                  {
+                    "x": 0.3353236869677347,
+                    "y": 0.4053658533457368
+                  },
+                  {
+                    "x": 0.4877225377237365,
+                    "y": 0.40536680829969657
+                  },
+                  {
+                    "x": 0.48772255951130167,
+                    "y": 0.41440220976773634
+                  },
+                  {
+                    "x": 0.3353237336553507,
+                    "y": 0.4144012886063044
+                  }
+                ],
+                "page": 1
+              }
+            ],
+            "type": "string",
+            "value": "Bionano Genomics, Inc."
+          },
+          "cargo": {
+            "success": true,
+            "confidence": 0.546875,
+            "geometry": [
+              {
+                "boundingBox": {
+                  "top": 0.4053668817573976,
+                  "left": 0.4994454790270623,
+                  "width": 0.10965802218674586,
+                  "height": 0.00952446022726433
+                },
+                "vertices": [
+                  {
+                    "x": 0.4994454790270623,
+                    "y": 0.4053668817573976
+                  },
+                  {
+                    "x": 0.6091034991525217,
+                    "y": 0.4053675688909292
+                  },
+                  {
+                    "x": 0.6091035012138082,
+                    "y": 0.41489134198466193
+                  },
+                  {
+                    "x": 0.4994454999734267,
+                    "y": 0.414890680480756
+                  }
+                ],
+                "page": 1
+              }
+            ],
+            "type": "string",
+            "value": "BMT Data Analyst"
+          }
+        },
+        {
+          "fecha_inicio": {
+            "success": true,
+            "confidence": 0.1572265625,
+            "geometry": [
+              {
+                "boundingBox": {
+                  "top": 0.5201403884524608,
+                  "left": 0.4242235636602052,
+                  "width": 0.05104366217740047,
+                  "height": 0.006837751165867378
+                },
+                "vertices": [
+                  {
+                    "x": 0.4242235636602052,
+                    "y": 0.5201403884524608
+                  },
+                  {
+                    "x": 0.4752672078097273,
+                    "y": 0.5201405645276529
+                  },
+                  {
+                    "x": 0.47526722583760567,
+                    "y": 0.5269781396183282
+                  },
+                  {
+                    "x": 0.42422358799932536,
+                    "y": 0.5269779721082727
+                  }
+                ],
+                "page": 1
+              }
+            ],
+            "type": "string",
+            "value": "2016-08"
+          },
+          "fecha_fin": {
+            "success": true,
+            "confidence": 0.185546875,
+            "geometry": [
+              {
+                "boundingBox": {
+                  "top": 0.5201406108631564,
+                  "left": 0.48869972448954335,
+                  "width": 0.051043492673137236,
+                  "height": 0.006837740346220866
+                },
+                "vertices": [
+                  {
+                    "x": 0.48869972448954335,
+                    "y": 0.5201406108631564
+                  },
+                  {
+                    "x": 0.539743207106852,
+                    "y": 0.5201407869377914
+                  },
+                  {
+                    "x": 0.5397432171626806,
+                    "y": 0.5269783512093773
+                  },
+                  {
+                    "x": 0.48869974085657386,
+                    "y": 0.5269781836998519
+                  }
+                ],
+                "page": 1
+              }
+            ],
+            "type": "string",
+            "value": "2018-05"
+          },
+          "logros_clave": {
+            "success": true,
+            "confidence": 0.059326171875,
+            "geometry": [
+              {
+                "boundingBox": {
+                  "top": 0.5347921362835943,
+                  "left": 0.3546184588746594,
+                  "width": 0.5216665467161312,
+                  "height": 0.042491789046440465
+                },
+                "vertices": [
+                  {
+                    "x": 0.3546184588746594,
+                    "y": 0.5347921362835943
+                  },
+                  {
+                    "x": 0.8762850055907907,
+                    "y": 0.534793748197601
+                  },
+                  {
+                    "x": 0.87628480949901,
+                    "y": 0.5772839253300348
+                  },
+                  {
+                    "x": 0.35461866360660965,
+                    "y": 0.5772828573872494
+                  }
+                ],
+                "page": 1
+              },
+              {
+                "boundingBox": {
+                  "top": 0.5352816678334973,
+                  "left": 0.7224240549993992,
+                  "width": 0.17730632197937313,
+                  "height": 0.007814831454594051
+                },
+                "vertices": [
+                  {
+                    "x": 0.7224240693209587,
+                    "y": 0.5352816678334973
+                  },
+                  {
+                    "x": 0.8997303769787723,
+                    "y": 0.5352822135727404
+                  },
+                  {
+                    "x": 0.89973033760296,
+                    "y": 0.5430964992880913
+                  },
+                  {
+                    "x": 0.7224240549993992,
+                    "y": 0.5430959875511554
+                  }
+                ],
+                "page": 1
+              }
+            ],
+            "type": "string",
+            "value": "Demonstrate initiative by completing Moffitt Cancer Center classes in Bioinformatics and Biostatistics Build RedCap forms for clinical data abstraction Create video tutorials using Camtasia to teach customers how to use Qlik based tools"
+          },
+          "empresa": {
+            "success": true,
+            "confidence": 0.369140625,
+            "geometry": [
+              {
+                "boundingBox": {
+                  "top": 0.5079300783052362,
+                  "left": 0.33483575815262934,
+                  "width": 0.19611527526703454,
+                  "height": 0.00976869012741699
+                },
+                "vertices": [
+                  {
+                    "x": 0.33483575815262934,
+                    "y": 0.5079300783052362
+                  },
+                  {
+                    "x": 0.5309510175011958,
+                    "y": 0.5079308135698728
+                  },
+                  {
+                    "x": 0.5309510334196639,
+                    "y": 0.5176987684326532
+                  },
+                  {
+                    "x": 0.33483580871181884,
+                    "y": 0.5176980801797444
+                  }
+                ],
+                "page": 1
+              }
+            ],
+            "type": "string",
+            "value": "Moffitt Cancer Center (M2Gen)"
+          },
+          "cargo": {
+            "success": true,
+            "confidence": 0.4453125,
+            "geometry": [
+              {
+                "boundingBox": {
+                  "top": 0.5079308666771317,
+                  "left": 0.5451161810676051,
+                  "width": 0.13041673285227307,
+                  "height": 0.009280013227400241
+                },
+                "vertices": [
+                  {
+                    "x": 0.5451161810676051,
+                    "y": 0.5079308666771317
+                  },
+                  {
+                    "x": 0.6755329139198781,
+                    "y": 0.5079313556284352
+                  },
+                  {
+                    "x": 0.6755329047813816,
+                    "y": 0.517210879904532
+                  },
+                  {
+                    "x": 0.5451161938132083,
+                    "y": 0.5172104206529076
+                  }
+                ],
+                "page": 1
+              }
+            ],
+            "type": "string",
+            "value": "Data Project Analyst"
+          }
+        },
+        {
+          "fecha_inicio": {
+            "success": true,
+            "confidence": 0.314453125,
+            "geometry": [
+              {
+                "boundingBox": {
+                  "top": 0.7111036330264326,
+                  "left": 0.4242242434147984,
+                  "width": 0.051043487201590965,
+                  "height": 0.0073259949631744314
+                },
+                "vertices": [
+                  {
+                    "x": 0.4242242434147984,
+                    "y": 0.7111036961616789
+                  },
+                  {
+                    "x": 0.475267711300939,
+                    "y": 0.7111036330264326
+                  },
+                  {
+                    "x": 0.4752677306163894,
+                    "y": 0.7184295556775556
+                  },
+                  {
+                    "x": 0.42422426949224673,
+                    "y": 0.7184296279896071
+                  }
+                ],
+                "page": 1
+              }
+            ],
+            "type": "string",
+            "value": "2016-04"
+          },
+          "fecha_fin": {
+            "success": true,
+            "confidence": 0.1796875,
+            "geometry": [
+              {
+                "boundingBox": {
+                  "top": 0.711103553276874,
+                  "left": 0.4889444082464636,
+                  "width": 0.05079909047840819,
+                  "height": 0.0073259830252344615
+                },
+                "vertices": [
+                  {
+                    "x": 0.4889444082464636,
+                    "y": 0.7111036161098386
+                  },
+                  {
+                    "x": 0.5397434879508443,
+                    "y": 0.711103553276874
+                  },
+                  {
+                    "x": 0.5397434987248718,
+                    "y": 0.7184294643362759
+                  },
+                  {
+                    "x": 0.48894442575009245,
+                    "y": 0.7184295363021085
+                  }
+                ],
+                "page": 1
+              }
+            ],
+            "type": "string",
+            "value": "2016-08"
+          },
+          "logros_clave": {
+            "success": true,
+            "confidence": 0.11767578125,
+            "geometry": [
+              {
+                "boundingBox": {
+                  "top": 0.7262431639543524,
+                  "left": 0.35437515314860907,
+                  "width": 0.560495998772212,
+                  "height": 0.031746629131034654
+                },
+                "vertices": [
+                  {
+                    "x": 0.35437515314860907,
+                    "y": 0.7262440654818895
+                  },
+                  {
+                    "x": 0.9148711519208211,
+                    "y": 0.7262431639543524
+                  },
+                  {
+                    "x": 0.9148709832657,
+                    "y": 0.7579884548960351
+                  },
+                  {
+                    "x": 0.3543753062484343,
+                    "y": 0.757989793085387
+                  }
+                ],
+                "page": 1
+              }
+            ],
+            "type": "string",
+            "value": "Work directly with Executive Leadership to data mine clinicaltrials.gov and PubMed using R-Programming Apply a high degree of critical thinking to develop R-Scripts to compile PFS"
+          },
+          "empresa": {
+            "success": true,
+            "confidence": 0.333984375,
+            "geometry": [
+              {
+                "boundingBox": {
+                  "top": 0.507930437239791,
+                  "left": 0.4305734555876187,
+                  "width": 0.04273991782677028,
+                  "height": 0.007326137071134831
+                },
+                "vertices": [
+                  {
+                    "x": 0.4305734555876187,
+                    "y": 0.507930437239791
+                  },
+                  {
+                    "x": 0.4733133538399629,
+                    "y": 0.5079305974778873
+                  },
+                  {
+                    "x": 0.473313373414389,
+                    "y": 0.5152565743109259
+                  },
+                  {
+                    "x": 0.4305734808240453,
+                    "y": 0.5152564217568697
+                  }
+                ],
+                "page": 1
+              },
+              {
+                "boundingBox": {
+                  "top": 0.6984053109776471,
+                  "left": 0.3348367440536029,
+                  "width": 0.19611459977506446,
+                  "height": 0.009768116043783137
+                },
+                "vertices": [
+                  {
+                    "x": 0.3348367440536029,
+                    "y": 0.6984054924357119
+                  },
+                  {
+                    "x": 0.530951327910309,
+                    "y": 0.6984053109776471
+                  },
+                  {
+                    "x": 0.5309513438286674,
+                    "y": 0.7081731985522853
+                  },
+                  {
+                    "x": 0.3348367946124442,
+                    "y": 0.7081734270214303
+                  }
+                ],
+                "page": 1
+              }
+            ],
+            "type": "string",
+            "value": "Moffitt Cancer Center (M2Gen)"
+          },
+          "cargo": {
+            "success": true,
+            "confidence": 0.33984375,
+            "geometry": [
+              {
+                "boundingBox": {
+                  "top": 0.6984051722300685,
+                  "left": 0.5446279906172881,
+                  "width": 0.13627767332510687,
+                  "height": 0.008302827964761006
+                },
+                "vertices": [
+                  {
+                    "x": 0.5446279906172881,
+                    "y": 0.6984052983231026
+                  },
+                  {
+                    "x": 0.6809056639423949,
+                    "y": 0.6984051722300685
+                  },
+                  {
+                    "x": 0.680905654959225,
+                    "y": 0.7067078463344735
+                  },
+                  {
+                    "x": 0.5446280020945057,
+                    "y": 0.7067080001948295
+                  }
+                ],
+                "page": 1
+              }
+            ],
+            "type": "string",
+            "value": "Bioinformatics Intern"
+          }
+        }
+      ],
+      "educacion": [
+        {
+          "institucion": {
+            "success": true,
+            "confidence": 0.63671875,
+            "geometry": [
+              {
+                "boundingBox": {
+                  "top": 0.8024343425833591,
+                  "left": 0.04112035487574467,
+                  "width": 0.14302771022202418,
+                  "height": 0.009280067391597036
+                },
+                "vertices": [
+                  {
+                    "x": 0.04112035487574467,
+                    "y": 0.8024348400620122
+                  },
+                  {
+                    "x": 0.18414799178088762,
+                    "y": 0.8024343425833591
+                  },
+                  {
+                    "x": 0.18414806509776885,
+                    "y": 0.8117138799252752
+                  },
+                  {
+                    "x": 0.041120452193310404,
+                    "y": 0.8117144099749561
+                  }
+                ],
+                "page": 1
+              }
+            ],
+            "type": "string",
+            "value": "University of Waterloo"
+          },
+          "titulo": {
+            "success": true,
+            "confidence": 0.416015625,
+            "geometry": [
+              {
+                "boundingBox": {
+                  "top": 0.8400407387923068,
+                  "left": 0.04072387316111249,
+                  "width": 0.17309845061174728,
+                  "height": 0.019536668476347052
+                },
+                "vertices": [
+                  {
+                    "x": 0.04072387316111249,
+                    "y": 0.8400415006133151
+                  },
+                  {
+                    "x": 0.2138221799046909,
+                    "y": 0.8400407387923068
+                  },
+                  {
+                    "x": 0.21382232377285976,
+                    "y": 0.8595765624607222
+                  },
+                  {
+                    "x": 0.04072407818008746,
+                    "y": 0.8595774072686538
+                  }
+                ],
+                "page": 1
+              }
+            ],
+            "type": "string",
+            "value": "Bachelor of Science: Honors Biochemistry"
+          },
+          "anio_fin": {
+            "success": true,
+            "confidence": 0.34375,
+            "geometry": [
+              {
+                "boundingBox": {
+                  "top": 0.8249009594989495,
+                  "left": 0.04069318533134629,
+                  "width": 0.05064751865907148,
+                  "height": 0.007326174715937772
+                },
+                "vertices": [
+                  {
+                    "x": 0.04069318533134629,
+                    "y": 0.8249011635846702
+                  },
+                  {
+                    "x": 0.09134063381384652,
+                    "y": 0.8249009594989495
+                  },
+                  {
+                    "x": 0.09134070399041777,
+                    "y": 0.8322269210236157
+                  },
+                  {
+                    "x": 0.040693262217565376,
+                    "y": 0.8322271342148873
+                  }
+                ],
+                "page": 1
+              }
+            ],
+            "type": "string",
+            "value": "2015"
+          }
+        },
+        {
+          "institucion": {
+            "success": true,
+            "confidence": 0.58984375,
+            "geometry": [
+              {
+                "boundingBox": {
+                  "top": 0.914765115897737,
+                  "left": 0.041243648486855175,
+                  "width": 0.1844242534312217,
+                  "height": 0.009280682048434685
+                },
+                "vertices": [
+                  {
+                    "x": 0.041243648486855175,
+                    "y": 0.9147662657600336
+                  },
+                  {
+                    "x": 0.22566783556851638,
+                    "y": 0.914765115897737
+                  },
+                  {
+                    "x": 0.2256679019180769,
+                    "y": 0.9240446060860567
+                  },
+                  {
+                    "x": 0.04124374578353397,
+                    "y": 0.9240457979461717
+                  }
+                ],
+                "page": 1
+              }
+            ],
+            "type": "string",
+            "value": "Heart Lake Secondary School"
+          },
+          "titulo": {
+            "success": true,
+            "confidence": 0.5234375,
+            "geometry": [
+              {
+                "boundingBox": {
+                  "top": 0.9523718641677424,
+                  "left": 0.04066399427901765,
+                  "width": 0.12736612212963144,
+                  "height": 0.00928043135334089
+                },
+                "vertices": [
+                  {
+                    "x": 0.04066399427901765,
+                    "y": 0.9523727758237719
+                  },
+                  {
+                    "x": 0.16803004038731725,
+                    "y": 0.9523718641677424
+                  },
+                  {
+                    "x": 0.1680301164086491,
+                    "y": 0.9616513548608042
+                  },
+                  {
+                    "x": 0.040664091672898965,
+                    "y": 0.9616522955210833
+                  }
+                ],
+                "page": 1
+              }
+            ],
+            "type": "string",
+            "value": "High School Diploma"
+          },
+          "anio_fin": {
+            "success": true,
+            "confidence": 0.46484375,
+            "geometry": [
+              {
+                "boundingBox": {
+                  "top": 0.9377202512398285,
+                  "left": 0.10599553413034758,
+                  "width": 0.02955189749857072,
+                  "height": 0.006837734691571562
+                },
+                "vertices": [
+                  {
+                    "x": 0.10599553413034758,
+                    "y": 0.9377204521390655
+                  },
+                  {
+                    "x": 0.1355473715968663,
+                    "y": 0.9377202512398285
+                  },
+                  {
+                    "x": 0.1355474316289183,
+                    "y": 0.9445577800734695
+                  },
+                  {
+                    "x": 0.10599559781633923,
+                    "y": 0.9445579859314001
+                  }
+                ],
+                "page": 1
+              }
+            ],
+            "type": "string",
+            "value": "2010"
+          }
+        }
+      ],
+      "telefono": {
+        "success": true,
+        "confidence": 0.640625,
+        "geometry": [
+          {
+            "boundingBox": {
+              "top": 0.12080574480414673,
+              "left": 0.07588608140182025,
+              "width": 0.09152664634032252,
+              "height": 0.010074646968252707
+            },
+            "vertices": [
+              {
+                "x": 0.07588608140182025,
+                "y": 0.12080574480414673
+              },
+              {
+                "x": 0.16741264510528325,
+                "y": 0.12080695747489836
+              },
+              {
+                "x": 0.16741272774214278,
+                "y": 0.13088039177239943
+              },
+              {
+                "x": 0.07588618071101108,
+                "y": 0.13087920172802697
+              }
+            ],
+            "page": 1
+          }
+        ],
+        "type": "string",
+        "value": "(555) 432-1000"
+      },
+      "habilidades_tecnicas": [
+        {
+          "confidence": 0.5859375,
+          "geometry": [
+            {
+              "boundingBox": {
+                "top": 0.24834226229260445,
+                "left": 0.14689814704651022,
+                "width": 0.09329677725748622,
+                "height": 0.00928065465730013
+              },
+              "vertices": [
+                {
+                  "x": 0.14689814704651022,
+                  "y": 0.24834226229260445
+                },
+                {
+                  "x": 0.24019486039134694,
+                  "y": 0.24834320641620736
+                },
+                {
+                  "x": 0.24019492430399644,
+                  "y": 0.2576229169499046
+                },
+                {
+                  "x": 0.14689822661486493,
+                  "y": 0.2576219940729731
+                }
+              ],
+              "page": 1
+            }
+          ],
+          "type": "string",
+          "value": "R-Programming"
+        },
+        {
+          "confidence": 0.15625,
+          "geometry": [
+            {
+              "boundingBox": {
+                "top": 0.27053551814013616,
+                "left": 0.06071539212867404,
+                "width": 0.03317035160827159,
+                "height": 0.0074764682900233526
+              },
+              "vertices": [
+                {
+                  "x": 0.06071539212867404,
+                  "y": 0.27053551814013616
+                },
+                {
+                  "x": 0.09388567246647016,
+                  "y": 0.27053583574303164
+                },
+                {
+                  "x": 0.09388574373694562,
+                  "y": 0.2780119864301595
+                },
+                {
+                  "x": 0.06071546788350616,
+                  "y": 0.27801167491303486
+                }
+              ],
+              "page": 1
+            }
+          ],
+          "type": "string",
+          "value": "Linux"
+        },
+        {
+          "confidence": 0.1611328125,
+          "geometry": [
+            {
+              "boundingBox": {
+                "top": 0.2705653677772582,
+                "left": 0.2090554636377392,
+                "width": 0.027842475847814185,
+                "height": 0.00757055150425473
+              },
+              "vertices": [
+                {
+                  "x": 0.2090554636377392,
+                  "y": 0.2705653677772582
+                },
+                {
+                  "x": 0.23689788689497135,
+                  "y": 0.270565634346905
+                },
+                {
+                  "x": 0.23689793948555338,
+                  "y": 0.27813591928151293
+                },
+                {
+                  "x": 0.20905552003977482,
+                  "y": 0.27813565788446964
+                }
+              ],
+              "page": 1
+            },
+            {
+              "boundingBox": {
+                "top": 0.2815531148135681,
+                "left": 0.060409362340432544,
+                "width": 0.053273487634104784,
+                "height": 0.00928022388331523
+              },
+              "vertices": [
+                {
+                  "x": 0.060409362340432544,
+                  "y": 0.2815531148135681
+                },
+                {
+                  "x": 0.11368276483249135,
+                  "y": 0.28155361049834104
+                },
+                {
+                  "x": 0.11368284997453733,
+                  "y": 0.2908333386968833
+                },
+                {
+                  "x": 0.06040945642209189,
+                  "y": 0.2908328551441608
+                }
+              ],
+              "page": 1
+            }
+          ],
+          "type": "string",
+          "value": "bash scripting"
+        },
+        {
+          "confidence": 0.2734375,
+          "geometry": [
+            {
+              "boundingBox": {
+                "top": 0.45599796277041227,
+                "left": 0.5561248791961065,
+                "width": 0.040311065004313695,
+                "height": 0.00863585042106052
+              },
+              "vertices": [
+                {
+                  "x": 0.5561248791961065,
+                  "y": 0.45599796277041227
+                },
+                {
+                  "x": 0.5964359403532173,
+                  "y": 0.4559981652781161
+                },
+                {
+                  "x": 0.5964359442004202,
+                  "y": 0.4646338131914728
+                },
+                {
+                  "x": 0.5561248893382014,
+                  "y": 0.4646336192267895
+                }
+              ],
+              "page": 1
+            }
+          ],
+          "type": "string",
+          "value": "MySQL"
+        },
+        {
+          "confidence": 0.369140625,
+          "geometry": [
+            {
+              "boundingBox": {
+                "top": 0.3150100257762975,
+                "left": 0.1806027756164346,
+                "width": 0.057638743516599034,
+                "height": 0.007326559188702231
+              },
+              "vertices": [
+                {
+                  "x": 0.1806027756164346,
+                  "y": 0.3150100257762975
+                },
+                {
+                  "x": 0.23824146841695715,
+                  "y": 0.3150105147551649
+                },
+                {
+                  "x": 0.23824151913303362,
+                  "y": 0.32233658496499973
+                },
+                {
+                  "x": 0.18060283396835825,
+                  "y": 0.322336106348877
+                }
+              ],
+              "page": 1
+            },
+            {
+              "boundingBox": {
+                "top": 0.3259981574072948,
+                "left": 0.06025716701191186,
+                "width": 0.06991179206660139,
+                "height": 0.008547675237878694
+              },
+              "vertices": [
+                {
+                  "x": 0.06025716701191186,
+                  "y": 0.3259981574072948
+                },
+                {
+                  "x": 0.13016888320633224,
+                  "y": 0.32599873165075915
+                },
+                {
+                  "x": 0.13016895907851325,
+                  "y": 0.3345458326451735
+                },
+                {
+                  "x": 0.06025725368952637,
+                  "y": 0.33454527306586773
+                }
+              ],
+              "page": 1
+            }
+          ],
+          "type": "string",
+          "value": "Microsoft SQL Server"
+        },
+        {
+          "confidence": 0.451171875,
+          "geometry": [
+            {
+              "boundingBox": {
+                "top": 0.3259981644286242,
+                "left": 0.061111984204430106,
+                "width": 0.14623442389972907,
+                "height": 0.020514200240983105
+              },
+              "vertices": [
+                {
+                  "x": 0.061111984204430106,
+                  "y": 0.3259981644286242
+                },
+                {
+                  "x": 0.20734625463901582,
+                  "y": 0.3259993655731337
+                },
+                {
+                  "x": 0.20734640810415916,
+                  "y": 0.34651236466960733
+                },
+                {
+                  "x": 0.06111219191357372,
+                  "y": 0.3465112371402818
+                }
+              ],
+              "page": 1
+            }
+          ],
+          "type": "string",
+          "value": "Apache Drill (NoSQL)"
+        },
+        {
+          "confidence": 0.2734375,
+          "geometry": [
+            {
+              "boundingBox": {
+                "top": 0.3594548350983268,
+                "left": 0.17388675130677164,
+                "width": 0.04432812175961731,
+                "height": 0.009035803939080156
+              },
+              "vertices": [
+                {
+                  "x": 0.17388675130677164,
+                  "y": 0.3594548350983268
+                },
+                {
+                  "x": 0.21821480724447734,
+                  "y": 0.35945516280727763
+                },
+                {
+                  "x": 0.21821487306638895,
+                  "y": 0.368490639037407
+                },
+                {
+                  "x": 0.17388682437141129,
+                  "y": 0.3684903211576693
+                }
+              ],
+              "page": 1
+            }
+          ],
+          "type": "string",
+          "value": "Python"
+        },
+        {
+          "confidence": 0.447265625,
+          "geometry": [
+            {
+              "boundingBox": {
+                "top": 0.37044313150324537,
+                "left": 0.060471321864951626,
+                "width": 0.031719855569378834,
+                "height": 0.008547321166074207
+              },
+              "vertices": [
+                {
+                  "x": 0.060471321864951626,
+                  "y": 0.37044313150324537
+                },
+                {
+                  "x": 0.09219109569243882,
+                  "y": 0.3704433574473615
+                },
+                {
+                  "x": 0.09219117743433046,
+                  "y": 0.3789904526693196
+                },
+                {
+                  "x": 0.06047140850939705,
+                  "y": 0.37899023337848986
+                }
+              ],
+              "page": 1
+            }
+          ],
+          "type": "string",
+          "value": "Java"
+        },
+        {
+          "confidence": 0.474609375,
+          "geometry": [
+            {
+              "boundingBox": {
+                "top": 0.37019937625121496,
+                "left": 0.12326970753926629,
+                "width": 0.07174323821018162,
+                "height": 0.007326574825268384
+              },
+              "vertices": [
+                {
+                  "x": 0.12326970753926629,
+                  "y": 0.37019937625121496
+                },
+                {
+                  "x": 0.1950128893066028,
+                  "y": 0.3701998877172724
+                },
+                {
+                  "x": 0.1950129457494479,
+                  "y": 0.37752595107648335
+                },
+                {
+                  "x": 0.1232697734865042,
+                  "y": 0.3775254525089496
+                }
+              ],
+              "page": 1
+            }
+          ],
+          "type": "string",
+          "value": "Visual Basic"
+        },
+        {
+          "confidence": 0.640625,
+          "geometry": [
+            {
+              "boundingBox": {
+                "top": 0.3809444337290997,
+                "left": 0.14457907793110705,
+                "width": 0.06325611825264249,
+                "height": 0.009035905789866294
+              },
+              "vertices": [
+                {
+                  "x": 0.14457907793110705,
+                  "y": 0.3809444337290997
+                },
+                {
+                  "x": 0.20783512866593773,
+                  "y": 0.3809448680095539
+                },
+                {
+                  "x": 0.20783519618374954,
+                  "y": 0.389980339518966
+                },
+                {
+                  "x": 0.14457915578428404,
+                  "y": 0.3899799192647638
+                }
+              ],
+              "page": 1
+            }
+          ],
+          "type": "string",
+          "value": "Qlik Sense"
+        },
+        {
+          "confidence": 0.337890625,
+          "geometry": [
+            {
+              "boundingBox": {
+                "top": 0.353351138465453,
+                "left": 0.35461758464215926,
+                "width": 0.06398814871900077,
+                "height": 0.008547514678682533
+              },
+              "vertices": [
+                {
+                  "x": 0.35461758464215926,
+                  "y": 0.353351138465453
+                },
+                {
+                  "x": 0.41860570206889647,
+                  "y": 0.3533516211043684
+                },
+                {
+                  "x": 0.41860573336116,
+                  "y": 0.36189865314413555
+                },
+                {
+                  "x": 0.35461762582416895,
+                  "y": 0.36189818392686907
+                }
+              ],
+              "page": 1
+            }
+          ],
+          "type": "string",
+          "value": "DNAnexus"
+        },
+        {
+          "confidence": 0.263671875,
+          "geometry": [
+            {
+              "boundingBox": {
+                "top": 0.4771614229802952,
+                "left": 0.4620787865220115,
+                "width": 0.029063129008165933,
+                "height": 0.007326112687378705
+              },
+              "vertices": [
+                {
+                  "x": 0.4620787865220115,
+                  "y": 0.4771614229802952
+                },
+                {
+                  "x": 0.49114189831758825,
+                  "y": 0.47716155388769016
+                },
+                {
+                  "x": 0.49114191553017744,
+                  "y": 0.4844875356676739
+                },
+                {
+                  "x": 0.46207880758475595,
+                  "y": 0.4844874099854314
+                }
+              ],
+              "page": 1
+            }
+          ],
+          "type": "string",
+          "value": "iStar"
+        },
+        {
+          "confidence": 0.267578125,
+          "geometry": [
+            {
+              "boundingBox": {
+                "top": 0.47731500461984866,
+                "left": 0.5209594923086976,
+                "width": 0.022836925243622797,
+                "height": 0.007404747841654569
+              },
+              "vertices": [
+                {
+                  "x": 0.5209594923086976,
+                  "y": 0.47731500461984866
+                },
+                {
+                  "x": 0.5437964072052232,
+                  "y": 0.477315107396999
+                },
+                {
+                  "x": 0.5437964175523204,
+                  "y": 0.48471975246150323
+                },
+                {
+                  "x": 0.520959505713611,
+                  "y": 0.48471965383421106
+                }
+              ],
+              "page": 1
+            }
+          ],
+          "type": "string",
+          "value": "Jira"
+        },
+        {
+          "confidence": 0.40625,
+          "geometry": [
+            {
+              "boundingBox": {
+                "top": 0.5577832908953184,
+                "left": 0.38819102350415813,
+                "width": 0.0445958279478616,
+                "height": 0.009359325029259069
+              },
+              "vertices": [
+                {
+                  "x": 0.38819102350415813,
+                  "y": 0.5577832908953184
+                },
+                {
+                  "x": 0.43278681958612997,
+                  "y": 0.5577834035315077
+                },
+                {
+                  "x": 0.4327868514520197,
+                  "y": 0.5671426159245775
+                },
+                {
+                  "x": 0.3881910629175796,
+                  "y": 0.5671425135312893
+                }
+              ],
+              "page": 1
+            }
+          ],
+          "type": "string",
+          "value": "RedCap"
+        },
+        {
+          "confidence": 0.302734375,
+          "geometry": [
+            {
+              "boundingBox": {
+                "top": 0.5689804693520127,
+                "left": 0.528508849111907,
+                "width": 0.05666054417292765,
+                "height": 0.00732606808693137
+              },
+              "vertices": [
+                {
+                  "x": 0.528508849111907,
+                  "y": 0.5689804693520127
+                },
+                {
+                  "x": 0.5851693885285706,
+                  "y": 0.5689805968911084
+                },
+                {
+                  "x": 0.5851693932848346,
+                  "y": 0.5763065374389441
+                },
+                {
+                  "x": 0.5285088613742719,
+                  "y": 0.5763064200865927
+                }
+              ],
+              "page": 1
+            }
+          ],
+          "type": "string",
+          "value": "Camtasia"
+        },
+        {
+          "confidence": 0.228515625,
+          "geometry": [
+            {
+              "boundingBox": {
+                "top": 0.30370374292854313,
+                "left": 0.19222350333484792,
+                "width": 0.023915346520080955,
+                "height": 0.008393512831811334
+              },
+              "vertices": [
+                {
+                  "x": 0.19222350333484792,
+                  "y": 0.30370374292854313
+                },
+                {
+                  "x": 0.21613878839611203,
+                  "y": 0.3037039524499692
+                },
+                {
+                  "x": 0.21613884985492887,
+                  "y": 0.31209725576035446
+                },
+                {
+                  "x": 0.19222356842344462,
+                  "y": 0.3120970511649683
+                }
+              ],
+              "page": 1
+            }
+          ],
+          "type": "string",
+          "value": "SQL"
+        },
+        {
+          "confidence": 0.34765625,
+          "geometry": [
+            {
+              "boundingBox": {
+                "top": 0.7140343654394301,
+                "left": 0.13798771626149547,
+                "width": 0.05983652852987098,
+                "height": 0.007814459591744094
+              },
+              "vertices": [
+                {
+                  "x": 0.13798771626149547,
+                  "y": 0.7140344437537306
+                },
+                {
+                  "x": 0.19782418498330043,
+                  "y": 0.7140343654394301
+                },
+                {
+                  "x": 0.19782424479136645,
+                  "y": 0.7218487352420521
+                },
+                {
+                  "x": 0.13798778452498822,
+                  "y": 0.7218488250311742
+                }
+              ],
+              "page": 1
+            }
+          ],
+          "type": "string",
+          "value": "MS Office"
+        },
+        {
+          "confidence": 0.40625,
+          "geometry": [
+            {
+              "boundingBox": {
+                "top": 0.7138777524911523,
+                "left": 0.16011215680982616,
+                "width": 0.03765914170030865,
+                "height": 0.007730828679478274
+              },
+              "vertices": [
+                {
+                  "x": 0.16011215680982616,
+                  "y": 0.7138778016348288
+                },
+                {
+                  "x": 0.19777123933448865,
+                  "y": 0.7138777524911523
+                },
+                {
+                  "x": 0.1977712985101348,
+                  "y": 0.721608524882342
+                },
+                {
+                  "x": 0.16011222125010416,
+                  "y": 0.7216085811706305
+                }
+              ],
+              "page": 1
+            },
+            {
+              "boundingBox": {
+                "top": 0.7252248004798025,
+                "left": 0.06047816829746856,
+                "width": 0.025710466789052255,
+                "height": 0.008640887017595023
+              },
+              "vertices": [
+                {
+                  "x": 0.06047816829746856,
+                  "y": 0.7252248411901893
+                },
+                {
+                  "x": 0.08618855150963184,
+                  "y": 0.7252248004798025
+                },
+                {
+                  "x": 0.08618863508652082,
+                  "y": 0.7338656413350929
+                },
+                {
+                  "x": 0.060478255891720616,
+                  "y": 0.7338656874973976
+                }
+              ],
+              "page": 1
+            }
+          ],
+          "type": "string",
+          "value": "Office 365"
+        },
+        {
+          "confidence": 0.203125,
+          "geometry": [
+            {
+              "boundingBox": {
+                "top": 0.7252475164567052,
+                "left": 0.0912198361462523,
+                "width": 0.04294375605796834,
+                "height": 0.008537122992471669
+              },
+              "vertices": [
+                {
+                  "x": 0.0912198361462523,
+                  "y": 0.7252475844786944
+                },
+                {
+                  "x": 0.1341635170374237,
+                  "y": 0.7252475164567052
+                },
+                {
+                  "x": 0.13416359220422064,
+                  "y": 0.7337845624303031
+                },
+                {
+                  "x": 0.09121991794258456,
+                  "y": 0.7337846394491768
+                }
+              ],
+              "page": 1
+            }
+          ],
+          "type": "string",
+          "value": "Teams"
+        },
+        {
+          "confidence": 0.287109375,
+          "geometry": [
+            {
+              "boundingBox": {
+                "top": 0.7247811553497747,
+                "left": 0.13916614923638326,
+                "width": 0.06055990276776563,
+                "height": 0.008728429731306386
+              },
+              "vertices": [
+                {
+                  "x": 0.13916614923638326,
+                  "y": 0.7247812505824834
+                },
+                {
+                  "x": 0.1997259855012176,
+                  "y": 0.7247811553497747
+                },
+                {
+                  "x": 0.1997260520041489,
+                  "y": 0.7335094768765382
+                },
+                {
+                  "x": 0.13916622529784467,
+                  "y": 0.7335095850810811
+                }
+              ],
+              "page": 1
+            }
+          ],
+          "type": "string",
+          "value": "OneDrive"
+        },
+        {
+          "confidence": 0.21875,
+          "geometry": [
+            {
+              "boundingBox": {
+                "top": 0.7247790571002594,
+                "left": 0.20515116825668228,
+                "width": 0.03480280453151799,
+                "height": 0.008791215602691471
+              },
+              "vertices": [
+                {
+                  "x": 0.20515116825668228,
+                  "y": 0.724779111827196
+                },
+                {
+                  "x": 0.23995391220159154,
+                  "y": 0.7247790571002594
+                },
+                {
+                  "x": 0.23995397278820027,
+                  "y": 0.733570210467643
+                },
+                {
+                  "x": 0.20515123437595537,
+                  "y": 0.7335702727029508
+                }
+              ],
+              "page": 1
+            }
+          ],
+          "type": "string",
+          "value": "Excel"
+        },
+        {
+          "confidence": 0.2392578125,
+          "geometry": [
+            {
+              "boundingBox": {
+                "top": 0.7355699739216103,
+                "left": 0.0604848350339255,
+                "width": 0.035317195194401324,
+                "height": 0.009525724669163016
+              },
+              "vertices": [
+                {
+                  "x": 0.0604848350339255,
+                  "y": 0.7355700388097018
+                },
+                {
+                  "x": 0.09580193974918713,
+                  "y": 0.7355699739216103
+                },
+                {
+                  "x": 0.09580203022832683,
+                  "y": 0.7450956254467797
+                },
+                {
+                  "x": 0.06048493159660552,
+                  "y": 0.7450956985907733
+                }
+              ],
+              "page": 1
+            }
+          ],
+          "type": "string",
+          "value": "Word"
+        },
+        {
+          "confidence": 0.30078125,
+          "geometry": [
+            {
+              "boundingBox": {
+                "top": 0.7602616014061736,
+                "left": 0.5806206922943313,
+                "width": 0.025294868045524277,
+                "height": 0.006799058215224196
+              },
+              "vertices": [
+                {
+                  "x": 0.5806206922943313,
+                  "y": 0.7602616632085528
+                },
+                {
+                  "x": 0.6059155584763545,
+                  "y": 0.7602616014061736
+                },
+                {
+                  "x": 0.6059155603398556,
+                  "y": 0.7670605935984889
+                },
+                {
+                  "x": 0.580620697267745,
+                  "y": 0.7670606596213978
+                }
+              ],
+              "page": 1
+            }
+          ],
+          "type": "string",
+          "value": "XML"
+        }
+      ],
+      "email": {
+        "success": true,
+        "confidence": 0.7109375,
+        "geometry": [
+          {
+            "boundingBox": {
+              "top": 0.09797254869869824,
+              "left": 0.07490891904381919,
+              "width": 0.17859562590892508,
+              "height": 0.009343275351891236
+            },
+            "vertices": [
+              {
+                "x": 0.07490891904381919,
+                "y": 0.09797254869869824
+              },
+              {
+                "x": 0.25350448286756416,
+                "y": 0.09797501505446794
+              },
+              {
+                "x": 0.25350454495274427,
+                "y": 0.10731582405058948
+              },
+              {
+                "x": 0.0749090112956161,
+                "y": 0.1073133986347037
+              }
+            ],
+            "page": 1
+          }
+        ],
+        "type": "string",
+        "value": "resumesample@example.com"
+      }
+    }
+  ]
+}

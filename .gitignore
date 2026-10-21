@@ -1,0 +1,34 @@
+# Configuración local (puede tener datos sensibles); se versiona config.json.example
+config.json
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# CDK
+cdk.out/
+cdk.context.json
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/public/config.json
+
+# Datos de muestra: solo se versiona el README, nunca hojas de vida
+muestras/cvs/*
+!muestras/cvs/.gitkeep
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Script local para sacar carpetas de OneDrive (no aplica a otros entornos)
+scripts/fuera-de-onedrive.ps1
+
+# Archivos locales de trabajo
+.claude/
+docs/PLAN.md
+CLAUDE.md

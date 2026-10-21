@@ -1,0 +1,38 @@
+{
+  "cuenta": "123456789012",
+  "region": "us-east-1",
+  "prefijo": "bda-ats",
+  "tags": {
+    "awswomen:proyecto": "bda-ats-demo",
+    "awswomen:entorno": "demo",
+    "awswomen:evento": "intro-bda-2026-10-22",
+    "awswomen:propietario": "nombre-de-quien-presenta",
+    "awswomen:administrado-por": "cdk"
+  },
+  "nag": {
+    "aws_solutions": false,
+    "hipaa_security": false,
+    "nist_800_53_r4": false,
+    "nist_800_53_r5": false,
+    "pci_dss_321": false,
+    "serverless": false
+  },
+  "registro": {
+    "correos_permitidos": ["persona@ejemplo.com"],
+    "dominios_permitidos": [],
+    "correos_reclutamiento": ["persona@ejemplo.com"]
+  },
+  "bda": {
+    "perfil": "us.data-automation-v1",
+    "segundos_espera": 5,
+    "max_vueltas": 60
+  },
+  "confianza": {
+    "alta": 0.6,
+    "media": 0.35
+  },
+  "precios_usd": {
+    "documento_pagina_custom": 0.04,
+    "imagen_custom": 0.005
+  }
+}

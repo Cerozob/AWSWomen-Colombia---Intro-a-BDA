@@ -1,0 +1,2 @@
+aws-lambda-powertools[tracer]==3.36.0
+pyjwt[crypto]==2.15.1

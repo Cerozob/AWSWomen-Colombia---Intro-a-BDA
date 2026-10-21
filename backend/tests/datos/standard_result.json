@@ -1,0 +1,16 @@
+{
+  "metadata": {
+    "asset_id": "0",
+    "semantic_modality": "DOCUMENT",
+    "number_of_pages": 2
+  },
+  "document": {
+    "summary": "Hoja de vida de una persona ingeniera de datos con experiencia en AWS.",
+    "representation": { "markdown": "# James Carter\nSenior Data Engineer" }
+  },
+  "pages": [{ "page_index": 0 }, { "page_index": 1 }],
+  "elements": [
+    { "type": "TEXT", "sub_type": "TITLE" },
+    { "type": "TABLE" }
+  ]
+}

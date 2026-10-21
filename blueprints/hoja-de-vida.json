@@ -1,0 +1,199 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "class": "Hoja de vida",
+  "description": "Hoja de vida o currículum de una persona candidata a un empleo de cualquier área, en español o en inglés, con datos de contacto, experiencia laboral, educación, habilidades, certificaciones e idiomas.",
+  "type": "object",
+  "definitions": {
+    "Idioma": {
+      "type": "object",
+      "properties": {
+        "idioma": {
+          "type": "string",
+          "inferenceType": "explicit",
+          "instruction": "Nombre del idioma, escrito en español (por ejemplo: inglés, español, japonés)"
+        },
+        "nivel": {
+          "type": "string",
+          "inferenceType": "inferred",
+          "instruction": "Nivel normalizado a una de estas opciones: Básico, Intermedio, Avanzado o Nativo. Convierte niveles MCER: A1 y A2 = Básico, B1 y B2 = Intermedio, C1 y C2 = Avanzado"
+        }
+      }
+    },
+    "Experiencia": {
+      "type": "object",
+      "properties": {
+        "empresa": {
+          "type": "string",
+          "inferenceType": "explicit",
+          "instruction": "Nombre de la empresa u organización, tal como aparece"
+        },
+        "cargo": {
+          "type": "string",
+          "inferenceType": "explicit",
+          "instruction": "Cargo o rol desempeñado, tal como aparece en su idioma original, sin traducir. Si hay varios roles en la misma línea, inclúyelos todos"
+        },
+        "fecha_inicio": {
+          "type": "string",
+          "inferenceType": "inferred",
+          "instruction": "Fecha de inicio en formato AAAA-MM; si solo aparece el año, AAAA. Los meses pueden estar en español o inglés. Vacío si no aparece"
+        },
+        "fecha_fin": {
+          "type": "string",
+          "inferenceType": "inferred",
+          "instruction": "Fecha de fin en formato AAAA-MM; si solo aparece el año, AAAA. Usa la palabra actual si el cargo sigue vigente (Present, Current, Actual, Hoy)"
+        },
+        "logros_clave": {
+          "type": "string",
+          "inferenceType": "inferred",
+          "instruction": "Logro o responsabilidad principal del cargo, traducido y resumido en una sola frase en español latino aunque el documento esté en inglés. Nunca copies el texto original en inglés"
+        }
+      }
+    },
+    "Educacion": {
+      "type": "object",
+      "properties": {
+        "institucion": {
+          "type": "string",
+          "inferenceType": "explicit",
+          "instruction": "Nombre de la universidad, instituto o institución educativa"
+        },
+        "titulo": {
+          "type": "string",
+          "inferenceType": "explicit",
+          "instruction": "Título, carrera, curso o programa tal como aparece en su idioma original, sin traducir. Si una institución tiene varios títulos, usa una fila por cada título"
+        },
+        "anio_fin": {
+          "type": "string",
+          "inferenceType": "inferred",
+          "instruction": "Año de finalización en formato AAAA, o la palabra en curso si no ha terminado"
+        }
+      }
+    }
+  },
+  "properties": {
+    "nombre_completo": {
+      "type": "string",
+      "inferenceType": "explicit",
+      "instruction": "Nombre completo de la persona candidata, tal como aparece en el encabezado. Nunca uses nombres de la sección de referencias o recomendaciones"
+    },
+    "titulo_profesional": {
+      "type": "string",
+      "inferenceType": "inferred",
+      "instruction": "Título o cargo con el que la persona se presenta en el encabezado, en su idioma original, sin traducir. Si no aparece, usa el cargo más reciente de su experiencia"
+    },
+    "area_profesional": {
+      "type": "string",
+      "inferenceType": "inferred",
+      "instruction": "Área profesional principal según su experiencia: Tecnología, Datos e IA, Ventas y mercadeo, Diseño y audiovisuales, Finanzas y contabilidad, Administración, Educación, Salud u Otra"
+    },
+    "email": {
+      "type": "string",
+      "inferenceType": "explicit",
+      "instruction": "Correo electrónico de la persona candidata"
+    },
+    "telefono": {
+      "type": "string",
+      "inferenceType": "explicit",
+      "instruction": "Teléfono de la persona candidata tal como aparece, con indicativo si lo tiene. Nunca uses teléfonos de referencias o recomendaciones"
+    },
+    "ubicacion": {
+      "type": "string",
+      "inferenceType": "inferred",
+      "instruction": "Ciudad y país de residencia en formato Ciudad, País. Si solo hay una dirección, dedúcelos de ella. Si no hay ciudad, deduce al menos el país por el indicativo telefónico (por ejemplo +57 = Colombia)"
+    },
+    "linkedin": {
+      "type": "string",
+      "inferenceType": "explicit",
+      "instruction": "URL o usuario del perfil de LinkedIn, si aparece"
+    },
+    "otros_enlaces": {
+      "type": "array",
+      "inferenceType": "explicit",
+      "instruction": "Otros enlaces profesionales de la persona candidata, como GitHub, portafolio o sitio web personal. No incluyas LinkedIn",
+      "items": {
+        "type": "string"
+      }
+    },
+    "idioma_documento": {
+      "type": "string",
+      "inferenceType": "inferred",
+      "instruction": "Idioma original en el que está escrito el texto de la hoja de vida (español o inglés), sin importar el idioma de estas instrucciones"
+    },
+    "anios_experiencia": {
+      "type": "number",
+      "inferenceType": "inferred",
+      "instruction": "Años totales de experiencia laboral, contando una sola vez los periodos en que hubo cargos simultáneos. Si un cargo no tiene fecha de inicio, no lo sumes. Número con un decimal"
+    },
+    "nivel_seniority": {
+      "type": "string",
+      "inferenceType": "inferred",
+      "instruction": "Nivel de seniority según años de experiencia y responsabilidades: Junior, Semi-senior, Senior o Líder. Usa Líder solo si ha supervisado equipos o personas"
+    },
+    "habilidades_tecnicas": {
+      "type": "array",
+      "inferenceType": "explicit",
+      "instruction": "Herramientas de software, plataformas, tecnologías y lenguajes de programación escritos en el documento, uno por elemento, en su idioma original y sin traducir. No agregues tecnologías que no aparezcan",
+      "items": {
+        "type": "string"
+      }
+    },
+    "habilidades_blandas": {
+      "type": "array",
+      "inferenceType": "inferred",
+      "instruction": "Máximo 5 habilidades blandas mencionadas en el documento o deducidas de la experiencia (por ejemplo: liderazgo, negociación), escritas en español",
+      "items": {
+        "type": "string"
+      }
+    },
+    "certificaciones": {
+      "type": "array",
+      "inferenceType": "explicit",
+      "instruction": "Certificaciones y credenciales profesionales con su nombre oficial, sin traducir, una por elemento. No incluyas cursos ni conteos de capacitaciones",
+      "items": {
+        "type": "string"
+      }
+    },
+    "logros_cuantificables": {
+      "type": "array",
+      "inferenceType": "inferred",
+      "instruction": "Máximo 5 logros que incluyan una cifra medible (porcentajes, montos, cantidades de personas, clientes o ventas), cada uno resumido en una frase en español latino",
+      "items": {
+        "type": "string"
+      }
+    },
+    "idiomas_estimados": {
+      "type": "array",
+      "inferenceType": "inferred",
+      "instruction": "Idiomas que la persona probablemente habla, estimados por el idioma del documento, la sección de idiomas y el idioma principal de su país de residencia o indicativo telefónico. En español, sin repetir",
+      "items": {
+        "type": "string"
+      }
+    },
+    "idiomas": {
+      "type": "array",
+      "instruction": "Idiomas que la persona declara en el documento y su nivel",
+      "items": {
+        "$ref": "#/definitions/Idioma"
+      }
+    },
+    "experiencia": {
+      "type": "array",
+      "instruction": "Experiencia laboral, del cargo más reciente al más antiguo. Si en una misma empresa hubo cargos distintos en fechas distintas, usa una fila por cargo",
+      "items": {
+        "$ref": "#/definitions/Experiencia"
+      }
+    },
+    "educacion": {
+      "type": "array",
+      "instruction": "Formación académica, de la más reciente a la más antigua",
+      "items": {
+        "$ref": "#/definitions/Educacion"
+      }
+    },
+    "resumen_perfil": {
+      "type": "string",
+      "inferenceType": "inferred",
+      "instruction": "Resumen de 3 a 4 frases en español latino, aunque el documento esté en inglés, con las fortalezas de la persona para un equipo de reclutamiento. Usa lenguaje neutro en género: sin adjetivos con género como experto o experta"
+    }
+  }
+}

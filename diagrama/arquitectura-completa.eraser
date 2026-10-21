@@ -1,0 +1,67 @@
+// Versión Completa
+direction right
+colorMode pastel
+styleMode plain
+typeface clean
+
+Usuarios [icon: users, label: "Usuarios"]
+
+Frontend [color: purple] {
+  CloudFront [icon: aws-cloudfront, label: "Amazon CloudFront"]
+  Sitio [icon: aws-s3, label: "S3 sitio web"]
+  Cognito [icon: aws-cognito, label: "Amazon Cognito"]
+  PreSignUp [icon: aws-lambda, label: "Pre SignUp Trigger"]
+}
+
+API [color: orange] {
+  API Gateway [icon: aws-api-gateway, label: "API Gateway"]
+  Autorizador [icon: aws-lambda, label: "Autorizador"]
+  Endpoints [color: orange] {
+    POST Subir CV [icon: aws-lambda, label: "POST Subir CV"]
+    GET Mis CVs [icon: aws-lambda, label: "GET Hojas de vida"]
+    GET Detalle [icon: aws-lambda, label: "GET Detalle CV"]
+    GET Crudo [icon: aws-lambda, label: "GET JSON crudo"]
+  }
+}
+
+Documentos [color: blue] {
+  Hojas de vida [icon: aws-s3, label: "S3 hojas de vida"]
+  Eventos de objetos [icon: aws-eventbridge, label: "Eventos de objetos"]
+}
+
+Procesar CV [color: pink, label: "Step Functions: procesar CV"] {
+  Inicio [icon: play-circle, label: "START"]
+  Preprocesar [icon: aws-lambda, label: "Preprocesar"]
+  Iniciar BDA [icon: aws-bedrock, label: "Bedrock Data Automation (inicia y consulta estado)"]
+  Postprocesar [icon: aws-lambda, label: "Postprocesar"]
+  Fin [icon: stop-circle, label: "END"]
+}
+
+Resultados BDA [icon: aws-s3, label: "S3 resultados BDA"]
+Seguimiento [icon: aws-dynamodb, label: "Seguimiento"]
+Resultados CV [icon: aws-dynamodb, label: "Resultados CV"]
+
+Usuarios > CloudFront
+CloudFront > Sitio
+CloudFront > Cognito
+Cognito <> PreSignUp
+Sitio > API Gateway
+API Gateway > Autorizador
+API Gateway > Endpoints
+POST Subir CV > Hojas de vida: URL prefirmada
+GET Mis CVs > Seguimiento
+GET Detalle > Resultados CV
+GET Crudo > Resultados BDA
+
+Hojas de vida > Eventos de objetos
+Eventos de objetos > Inicio
+Inicio > Preprocesar
+Preprocesar > Iniciar BDA
+Iniciar BDA > Postprocesar
+Postprocesar > Fin
+
+Iniciar BDA > Resultados BDA: escribe JSON
+Resultados BDA > Postprocesar: lee JSON
+Preprocesar > Seguimiento
+Postprocesar > Seguimiento
+Postprocesar > Resultados CV
