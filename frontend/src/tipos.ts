@@ -9,6 +9,8 @@ export interface ConfigWeb {
   urlSitio: string;
   confianza: { alta: number; media: number };
   consolaStepFunctions: string;
+  bucketCvs: string;
+  bucketResultadosBda: string;
 }
 
 export interface EventoHistorial {

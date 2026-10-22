@@ -47,6 +47,8 @@ class BdaAtsStack(Stack):
                 "dominioLogin": auth.dominio_login,
                 "urlSitio": sitio.url,
                 "confianza": {"alta": config.confianza_alta, "media": config.confianza_media},
+                "bucketCvs": almacenamiento.cvs.bucket_name,
+                "bucketResultadosBda": almacenamiento.resultados_bda.bucket_name,
                 "consolaStepFunctions": (
                     f"https://{self.region}.console.aws.amazon.com/states/home"
                     f"?region={self.region}#/v2/executions/details/"

@@ -37,7 +37,8 @@ class Bda(Construct):
                         granularity=P.DocumentExtractionGranularityProperty(
                             types=["DOCUMENT", "PAGE", "ELEMENT"]
                         ),
-                        bounding_box=P.DocumentBoundingBoxProperty(state="DISABLED"),
+                        # Con cajas habilitadas BDA ubica cada elemento y recorta las figuras (crop_images).
+                        bounding_box=P.DocumentBoundingBoxProperty(state="ENABLED"),
                     ),
                     generative_field=P.DocumentStandardGenerativeFieldProperty(state="ENABLED"),
                     output_format=P.DocumentOutputFormatProperty(

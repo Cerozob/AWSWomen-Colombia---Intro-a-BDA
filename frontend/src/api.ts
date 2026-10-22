@@ -35,12 +35,22 @@ async function descargarJson(url: string | null): Promise<unknown> {
 }
 
 /** La API solo firma las URLs; el JSON se descarga directo de S3 (sin límite de tamaño de la API). */
-export async function obtenerCrudo(id: string): Promise<{ standard: unknown; custom: unknown }> {
-  const urls = await llamar<{ standard: string | null; custom: string | null }>(
+/** Figura que BDA recortó del documento (salida estándar), con URL prefirmada para verla. */
+export interface ImagenExtraida {
+  tipo: string;
+  descripcion: string;
+  pagina: number | null;
+  url: string;
+}
+
+export async function obtenerCrudo(
+  id: string,
+): Promise<{ standard: unknown; custom: unknown; imagenes: ImagenExtraida[] }> {
+  const urls = await llamar<{ standard: string | null; custom: string | null; imagenes?: ImagenExtraida[] }>(
     `/cvs/${encodeURIComponent(id)}/crudo`,
   );
   const [standard, custom] = await Promise.all([descargarJson(urls.standard), descargarJson(urls.custom)]);
-  return { standard, custom };
+  return { standard, custom, imagenes: urls.imagenes ?? [] };
 }
 
 /** Pide la URL prefirmada y sube el archivo directo a S3; el resto lo dispara EventBridge. */

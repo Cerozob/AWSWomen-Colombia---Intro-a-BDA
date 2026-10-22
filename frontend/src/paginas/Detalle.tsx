@@ -19,7 +19,7 @@ import Toggle, { type ToggleProps } from '@cloudscape-design/components/toggle';
 import CodeView from '@cloudscape-design/code-view/code-view';
 import { useState } from 'react';
 import { useParams } from 'react-router';
-import { obtenerCrudo, obtenerDocumento } from '../api';
+import { obtenerCrudo, obtenerDocumento, type ImagenExtraida } from '../api';
 import { Confianza, EstadoDocumento, useConfig } from '../componentes';
 import { ETAPAS, NOMBRES_CAMPO, esBilingue, fechaHora, limpiarLista, texto, usd } from '../formato';
 import { cajasDesdeBda, hallazgosDesdeBda, markdownDesdeBda, type Hallazgo } from '../hallazgos';
@@ -148,7 +148,31 @@ function SalidaEstandar({ resultado }: { resultado: Resultado }) {
 
 const ALTO_PANEL = '75vh';
 
-type VistaBda = 'tabla' | 'custom' | 'standard' | 'markdown';
+/** Figuras que BDA detectó y recortó del documento (fotos, logos, gráficos). */
+function ImagenesExtraidas({ imagenes }: { imagenes: ImagenExtraida[] }) {
+  if (!imagenes.length) {
+    return <Box color="text-status-inactive">BDA no extrajo imágenes de este documento.</Box>;
+  }
+  return (
+    <div style={{ maxHeight: ALTO_PANEL, overflow: 'auto' }}>
+      <ColumnLayout columns={3} minColumnWidth={180}>
+        {imagenes.map((img) => (
+          <SpaceBetween key={img.url} size="xxs">
+            <a href={img.url} target="_blank" rel="noreferrer">
+              <img src={img.url} alt={img.descripcion || img.tipo} style={{ width: '100%', border: '1px solid #ddd', borderRadius: 4 }} />
+            </a>
+            <Box fontSize="body-s" color="text-body-secondary">
+              {[img.tipo, img.pagina != null ? `página ${img.pagina + 1}` : ''].filter(Boolean).join(' · ')}
+            </Box>
+            {img.descripcion && <Box fontSize="body-s">{img.descripcion}</Box>}
+          </SpaceBetween>
+        ))}
+      </ColumnLayout>
+    </div>
+  );
+}
+
+type VistaBda = 'tabla' | 'imagenes' | 'custom' | 'standard' | 'markdown';
 
 function TablaHallazgos({ filas, aRevisar }: { filas: Hallazgo[]; aRevisar: string[] }) {
   const [expandidos, setExpandidos] = useState<Hallazgo[]>([]);
@@ -187,7 +211,7 @@ function TablaHallazgos({ filas, aRevisar }: { filas: Hallazgo[]; aRevisar: stri
 }
 
 /** Resultados de BDA como en su consola: tabla de hallazgos o la respuesta tal cual (JSON o markdown). */
-type Crudo = { standard: unknown; custom: unknown };
+type Crudo = { standard: unknown; custom: unknown; imagenes: ImagenExtraida[] };
 
 function ResultadosBda({
   resultado,
@@ -205,6 +229,7 @@ function ResultadosBda({
   let contenido;
   if (cargando) contenido = <Spinner size="large" />;
   else if (error) contenido = <Alert type="error">{error}</Alert>;
+  else if (vista === 'imagenes') contenido = <ImagenesExtraidas imagenes={datos?.imagenes ?? []} />;
   else if (vista === 'tabla')
     contenido = <TablaHallazgos filas={hallazgosDesdeBda(datos?.custom)} aRevisar={resultado.camposARevisar ?? []} />;
   else {
@@ -231,6 +256,7 @@ function ResultadosBda({
               onChange={({ detail }) => setVista(detail.selectedId as VistaBda)}
               options={[
                 { id: 'tabla', text: 'Hallazgos' },
+                { id: 'imagenes', text: `Imágenes (${datos?.imagenes.length ?? 0})` },
                 { id: 'custom', text: 'JSON personalizado' },
                 { id: 'standard', text: 'JSON estándar' },
                 { id: 'markdown', text: 'Markdown' },
@@ -368,6 +394,30 @@ export default function Detalle() {
                 { label: 'Costo estimado', value: usd(s.costoEstimadoUsd) },
                 { label: 'Segundos totales', value: texto(s.segundosTotales) },
                 { label: 'Consultas de estado a BDA', value: texto(s.vueltasSondeo) },
+                {
+                  label: 'Entrada en S3',
+                  value: s.s3Key ? (
+                    <Link
+                      external
+                      href={`https://s3.console.aws.amazon.com/s3/object/${config.bucketCvs}?region=${config.region}&prefix=${encodeURIComponent(s.s3Key)}`}
+                    >
+                      {s.s3Key}
+                    </Link>
+                  ) : (
+                    '-'
+                  ),
+                },
+                {
+                  label: 'Salida de BDA en S3',
+                  value: (
+                    <Link
+                      external
+                      href={`https://s3.console.aws.amazon.com/s3/buckets/${config.bucketResultadosBda}?region=${config.region}&prefix=${encodeURIComponent(`bda/${s.documentoId}/`)}`}
+                    >
+                      {`bda/${s.documentoId}/`}
+                    </Link>
+                  ),
+                },
                 {
                   label: 'Ejecución de Step Functions',
                   value: s.ejecucionArn ? (

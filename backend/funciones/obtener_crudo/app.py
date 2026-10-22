@@ -3,6 +3,7 @@
 El navegador descarga los archivos directo de S3, así su tamaño no pasa por la API.
 """
 
+import json
 import os
 
 import boto3
@@ -33,6 +34,31 @@ def url_firmada(uri: str | None) -> str | None:
     )
 
 
+def imagenes_extraidas(standard: dict | None) -> list[dict]:
+    """Figuras que BDA recortó del documento (elementos con crop_images en la salida estándar)."""
+    imagenes = []
+    for elemento in (standard or {}).get("elements", []) or []:
+        for uri in elemento.get("crop_images", []) or []:
+            imagenes.append(
+                {
+                    "tipo": elemento.get("sub_type") or elemento.get("type") or "",
+                    "descripcion": elemento.get("summary") or elemento.get("title") or "",
+                    "pagina": (elemento.get("page_indices") or [None])[0],
+                    "uri": uri,
+                }
+            )
+    return imagenes
+
+
+def leer_json(uri: str | None) -> dict | None:
+    if not uri:
+        return None
+    bucket, llave = separar_uri(uri)
+    if bucket != BUCKET:
+        raise ValueError("Ruta fuera del bucket de resultados")
+    return json.loads(s3.get_object(Bucket=bucket, Key=llave)["Body"].read())
+
+
 @logger.inject_lambda_context
 @tracer.capture_lambda_handler
 def handler(event, context):
@@ -48,11 +74,18 @@ def handler(event, context):
     if not resultado:
         return error(404, "Este documento todavía no tiene resultados de BDA.")
     rutas = resultado.get("rutasCrudas", {})
+    imagenes = []
+    for imagen in imagenes_extraidas(leer_json(rutas.get("standard"))):
+        try:
+            imagenes.append({**imagen, "url": url_firmada(imagen.pop("uri"))})
+        except ValueError:
+            logger.warning("Imagen fuera del bucket de resultados")
     return respuesta(
         200,
         {
             "standard": url_firmada(rutas.get("standard")),
             "custom": url_firmada(rutas.get("custom")),
+            "imagenes": imagenes,
             "vigenciaSegundos": VIGENCIA_S,
         },
     )

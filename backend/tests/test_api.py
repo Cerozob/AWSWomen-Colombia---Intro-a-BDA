@@ -178,8 +178,11 @@ def test_crudo_devuelve_urls_prefirmadas(monkeypatch, contexto):
     monkeypatch.setattr(obtener_crudo, "dynamodb", DynamoFalso(TablaFalsa(DOCS), resultados))
     monkeypatch.setattr(obtener_crudo, "BUCKET", "resultados")
     monkeypatch.setattr(obtener_crudo, "TABLA_RESULTADOS", "resultados")
+    figura = {"type": "FIGURE", "crop_images": ["s3://resultados/bda/a/x/assets/fig1.png"]}
+    monkeypatch.setattr(obtener_crudo, "leer_json", lambda _uri: {"elements": [figura]})
     r = obtener_crudo.handler(_evento(pathParameters={"id": "a"}), contexto)
     cuerpo = json.loads(r["body"])
+    assert urlparse(cuerpo["imagenes"][0]["url"]).path.endswith("/assets/fig1.png")
     assert r["statusCode"] == 200
     url = urlparse(cuerpo["custom"])
     assert url.netloc.startswith("resultados.")
@@ -240,3 +243,27 @@ def test_url_de_descarga_usa_el_nombre_original(monkeypatch):
     assert consulta["response-content-disposition"] == [
         "attachment; filename*=UTF-8''CV%20%C3%91and%C3%BA.pdf"
     ]
+
+
+def test_imagenes_extraidas_de_la_salida_estandar():
+    standard = {
+        "elements": [
+            {"type": "TEXT"},
+            {
+                "type": "FIGURE",
+                "sub_type": "IMAGE",
+                "summary": "Foto de un gato",
+                "page_indices": [0],
+                "crop_images": ["s3://resultados/bda/a/x/assets/fig1.png"],
+            },
+        ]
+    }
+    assert obtener_crudo.imagenes_extraidas(standard) == [
+        {
+            "tipo": "IMAGE",
+            "descripcion": "Foto de un gato",
+            "pagina": 0,
+            "uri": "s3://resultados/bda/a/x/assets/fig1.png",
+        }
+    ]
+    assert obtener_crudo.imagenes_extraidas(None) == []
